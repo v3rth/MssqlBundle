@@ -1,5 +1,9 @@
 Installation
 -------
+### Step 0. System requirements
+    
+    sudo apt-get install freetds-bin php5-sybase
+
 
 ### Step 1. Install MssqlBundle
 Add the **realestate/mssql-bundle** into **composer.json**
