@@ -76,10 +76,8 @@ class Driver implements \Doctrine\DBAL\Driver
 
             $dsn = 'dblib:';
             if (isset($params['host'])) {
-                $dsn .= 'host=' . $params['host'] . ';';
-            }
-            if (isset($params['port'])) {
-                $dsn .= 'port=' . $params['port'] . ';';
+                $port = isset($params['port']) ? ':' . $params['port'] : '';
+                $dsn .= 'host=' . $params['host'] . $port . ';';
             }
             if (isset($params['dbname'])) {
                 $dsn .= 'dbname=' . $params['dbname'] . ';';
